@@ -5,9 +5,8 @@ import androidx.room.Database
 import androidx.room.Room
 import androidx.room.RoomDatabase
 import com.shiva.quickMart.models.CartItem
-import com.shiva.quickMart.models.Product
 
-@Database(entities = [CartItem::class, Product::class], version = 1, exportSchema = false)
+@Database(entities = [CartItem::class], version = 1, exportSchema = false)
 abstract class AppDatabase : RoomDatabase() {
     abstract fun cartDao(): CartDao
 
@@ -21,7 +20,8 @@ abstract class AppDatabase : RoomDatabase() {
                     context.applicationContext,
                     AppDatabase::class.java,
                     "quickmart_db"
-                ).build()
+                ).fallbackToDestructiveMigration()
+                 .build()
                 INSTANCE = instance
                 instance
             }

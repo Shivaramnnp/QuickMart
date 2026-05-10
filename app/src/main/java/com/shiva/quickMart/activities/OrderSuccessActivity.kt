@@ -13,7 +13,8 @@ class OrderSuccessActivity : AppCompatActivity() {
         binding = ActivityOrderSuccessBinding.inflate(layoutInflater)
         setContentView(binding.root)
         
-        binding.tvOrderId.text = "Order ID: QM1024"
+        val orderId = System.currentTimeMillis() % 100000
+        binding.tvOrderId.text = "Order ID: QM${orderId}"
         binding.tvDeliveryTime.text = "Estimated delivery: 15–20 mins"
 
         binding.btnContinueShopping.setOnClickListener {

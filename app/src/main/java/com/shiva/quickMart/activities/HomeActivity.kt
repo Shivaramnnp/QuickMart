@@ -24,16 +24,15 @@ class HomeActivity : AppCompatActivity() {
         binding = ActivityHomeBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        adapter = ProductAdapter(emptyList()) { product ->
-            viewModel.updateCartItem(product, product.quantity + 1)
-            Toast.makeText(this, "${product.name} added to cart", Toast.LENGTH_SHORT).show()
+        adapter = ProductAdapter { product, newQuantity ->
+            viewModel.updateCartItem(product, newQuantity)
         }
 
         binding.rvProducts.layoutManager = GridLayoutManager(this, 2)
         binding.rvProducts.adapter = adapter
 
         viewModel.products.observe(this) { products ->
-            adapter.updateProducts(products)
+            adapter.submitList(products)
         }
 
         viewModel.cartCount.observe(this) { count ->

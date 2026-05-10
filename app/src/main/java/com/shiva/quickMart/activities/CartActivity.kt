@@ -20,7 +20,7 @@ class CartActivity : AppCompatActivity() {
         binding = ActivityCartBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        adapter = CartAdapter(emptyList()) { cartItem, newQuantity ->
+        adapter = CartAdapter { cartItem, newQuantity ->
             viewModel.updateCartItem(cartItem, newQuantity)
         }
 
@@ -28,7 +28,7 @@ class CartActivity : AppCompatActivity() {
         binding.rvCartItems.adapter = adapter
 
         viewModel.allCartItems.observe(this) { items ->
-            adapter.updateItems(items)
+            adapter.submitList(items)
             updateBillSummary(items)
             
             if (items.isEmpty()) {
@@ -56,8 +56,8 @@ class CartActivity : AppCompatActivity() {
         val deliveryCharge = if (itemTotal > 0) 30.0 else 0.0
         val grandTotal = itemTotal + deliveryCharge
 
-        binding.tvItemTotal.text = "₹${itemTotal}"
-        binding.tvDeliveryCharge.text = "₹${deliveryCharge}"
-        binding.tvGrandTotal.text = "₹${grandTotal}"
+        binding.tvItemTotal.text = "₹${"%.0f".format(itemTotal)}"
+        binding.tvDeliveryCharge.text = "₹${"%.0f".format(deliveryCharge)}"
+        binding.tvGrandTotal.text = "₹${"%.0f".format(grandTotal)}"
     }
 }

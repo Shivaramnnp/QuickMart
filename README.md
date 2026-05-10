@@ -20,8 +20,10 @@ QuickMart is a lightweight, Blinkit-style grocery delivery Android application f
 * **Image Loading**: Glide
 * **Other Components**: RecyclerView, ViewBinding, LiveData
 
-## Screenshots 📱
-*(Add screenshots of the app here)*
+## Screenshots & Demo 📱
+*You can find the `quickmart_demo.mp4` screen recording in the project root to view the application in action!*
+
+![App Demo](quickmart_demo.mp4)
 
 ## Installation Steps 🚀
 1. Clone this repository to your local machine:

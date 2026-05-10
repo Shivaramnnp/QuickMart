@@ -1,3 +1,12 @@
+import os
+
+def write_file(path, content):
+    os.makedirs(os.path.dirname(path), exist_ok=True)
+    with open(path, 'w') as f:
+        f.write(content.strip())
+
+# Update item_product.xml to support quantity controls
+write_file('app/src/main/res/layout/item_product.xml', """
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
@@ -100,3 +109,40 @@
 
     </LinearLayout>
 </androidx.cardview.widget.CardView>
+""")
+
+# Setup Night Theme
+write_file('app/src/main/res/values-night/themes.xml', """
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <style name="Theme.QuickMart" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <item name="colorPrimary">#0A84FF</item>
+        <item name="colorPrimaryVariant">#005BB5</item>
+        <item name="colorOnPrimary">#FFFFFF</item>
+        <item name="colorSecondary">#34C759</item>
+        <item name="colorSecondaryVariant">#28A745</item>
+        <item name="colorOnSecondary">#000000</item>
+        <item name="colorError">#CF6679</item>
+        <item name="colorOnError">#000000</item>
+        <item name="colorSurface">#1E1E1E</item>
+        <item name="colorOnSurface">#FFFFFF</item>
+        <item name="android:colorBackground">#121212</item>
+        <item name="colorOnBackground">#FFFFFF</item>
+    </style>
+</resources>
+""")
+
+# Since we want animateLayoutChanges, we can inject them to activity_home and activity_cart
+def add_animate_layout(filepath):
+    with open(filepath, 'r') as f:
+        content = f.read()
+    
+    # Simple search & replace to add the property
+    content = content.replace('android:layout_width="match_parent"\\n    android:layout_height="match_parent"',
+                              'android:layout_width="match_parent"\\n    android:layout_height="match_parent"\\n    android:animateLayoutChanges="true"')
+    with open(filepath, 'w') as f:
+        f.write(content)
+
+add_animate_layout('app/src/main/res/layout/activity_home.xml')
+add_animate_layout('app/src/main/res/layout/activity_cart.xml')
+
+print("Done generating XML fixes!")

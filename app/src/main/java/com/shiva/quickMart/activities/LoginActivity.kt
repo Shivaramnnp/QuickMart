@@ -18,7 +18,7 @@ class LoginActivity : AppCompatActivity() {
         binding.btnSendOtp.setOnClickListener {
             val phone = binding.etPhone.text.toString()
             if (phone.length == 10) {
-                Toast.makeText(this, "OTP Sent: 1234", Toast.LENGTH_SHORT).show()
+                Toast.makeText(this, "OTP Sent", Toast.LENGTH_SHORT).show()
             } else {
                 Toast.makeText(this, "Enter valid 10-digit number", Toast.LENGTH_SHORT).show()
             }

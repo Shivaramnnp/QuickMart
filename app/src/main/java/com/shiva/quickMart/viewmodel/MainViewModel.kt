@@ -19,7 +19,7 @@ class MainViewModel(application: Application) : AndroidViewModel(application) {
 
     private val masterProducts = listOf(
         // Fruits
-        Product(1, "Apple", "Fruits", 120.0, "https://images.unsplash.com/photo-1560806887-1e4cd0b6fac6?auto=format&fit=crop&w=300&q=80"),
+        Product(1, "Apple", "Fruits", 120.0, "https://unsplash.com/photos/fresh-red-apples-in-the-wooden-box-on-black-background-top-view-9OrF6J9AcVA"),
         Product(2, "Banana", "Fruits", 50.0, "https://images.unsplash.com/photo-1528825871115-3581a5387919?auto=format&fit=crop&w=300&q=80"),
         Product(3, "Orange", "Fruits", 80.0, "https://images.unsplash.com/photo-1549888834-3ec93abae044?auto=format&fit=crop&w=300&q=80"),
         Product(4, "Grapes", "Fruits", 90.0, "https://images.unsplash.com/photo-1537640538966-79f369143f8f?auto=format&fit=crop&w=300&q=80"),
@@ -31,20 +31,20 @@ class MainViewModel(application: Application) : AndroidViewModel(application) {
         Product(8, "Yogurt", "Dairy", 45.0, "https://images.unsplash.com/photo-1564149504298-00c351fd7f16?auto=format&fit=crop&w=300&q=80"),
 
         // Snacks
-        Product(9, "Potato Chips", "Snacks", 30.0, "https://images.unsplash.com/photo-1566478989037-e924e50cb792?auto=format&fit=crop&w=300&q=80"),
+        Product(9, "Potato Chips", "Snacks", 30.0, "https://images.unsplash.com/photo-1621852004158-f3bc188ace2d?auto=format&fit=crop&w=300&q=80"),
         Product(10, "Nachos", "Snacks", 85.0, "https://images.unsplash.com/photo-1513456852971-30c0b8199d4d?auto=format&fit=crop&w=300&q=80"),
-        Product(11, "Popcorn", "Snacks", 50.0, "https://images.unsplash.com/photo-1572804013309-8c9959d0e2db?auto=format&fit=crop&w=300&q=80"),
+        Product(11, "Popcorn", "Snacks", 50.0, "https://images.unsplash.com/photo-1585653040134-4538ec2f004f?auto=format&fit=crop&w=300&q=80"),
         Product(12, "Cookies", "Snacks", 60.0, "https://images.unsplash.com/photo-1499636136210-6f4ee915583e?auto=format&fit=crop&w=300&q=80"),
 
         // Beverages
-        Product(13, "Orange Juice", "Beverages", 110.0, "https://images.unsplash.com/photo-1622483767028-3f66f32aef97?auto=format&fit=crop&w=300&q=80"),
+        Product(13, "Orange Juice", "Beverages", 110.0, "https://images.unsplash.com/photo-1600271886742-f049cd451bba?auto=format&fit=crop&w=300&q=80"),
         Product(14, "Cola", "Beverages", 40.0, "https://images.unsplash.com/photo-1622483767028-3f66f32aef97?auto=format&fit=crop&w=300&q=80"),
-        Product(15, "Energy Drink", "Beverages", 120.0, "https://images.unsplash.com/photo-1622483767028-3f66f32aef97?auto=format&fit=crop&w=300&q=80"),
+        Product(15, "Energy Drink", "Beverages", 120.0, "https://images.unsplash.com/photo-1622543925917-763c34d1a86e?auto=format&fit=crop&w=300&q=80"),
         
         // Bakery
         Product(16, "Whole Wheat Bread", "Bakery", 45.0, "https://images.unsplash.com/photo-1509440159596-0249088772ff?auto=format&fit=crop&w=300&q=80"),
-        Product(17, "Croissant", "Bakery", 60.0, "https://images.unsplash.com/photo-1555507036-ab1e4006aa24?auto=format&fit=crop&w=300&q=80"),
-        Product(18, "Muffins", "Bakery", 90.0, "https://images.unsplash.com/photo-1557925923-b6dc240a2a53?auto=format&fit=crop&w=300&q=80")
+        Product(17, "Croissant", "Bakery", 60.0, "https://images.unsplash.com/photo-1530610476181-d83430b64dcb?auto=format&fit=crop&w=300&q=80"),
+        Product(18, "Muffins", "Bakery", 90.0, "https://images.unsplash.com/photo-1607958996333-41aef7caefaa?auto=format&fit=crop&w=300&q=80")
     )
 
     private val _filteredProducts = MutableLiveData<List<Product>>()

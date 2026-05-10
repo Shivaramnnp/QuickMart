@@ -19,7 +19,7 @@ class MainViewModel(application: Application) : AndroidViewModel(application) {
 
     private val masterProducts = listOf(
         // Fruits
-        Product(1, "Apple", "Fruits", 120.0, "https://unsplash.com/photos/fresh-red-apples-in-the-wooden-box-on-black-background-top-view-9OrF6J9AcVA"),
+        //Product(1, "Apple", "Fruits", 120.0, "https://unsplash.com/photos/fresh-red-apples-in-the-wooden-box-on-black-background-top-view-9OrF6J9AcVA"),
         Product(2, "Banana", "Fruits", 50.0, "https://images.unsplash.com/photo-1528825871115-3581a5387919?auto=format&fit=crop&w=300&q=80"),
         Product(3, "Orange", "Fruits", 80.0, "https://images.unsplash.com/photo-1549888834-3ec93abae044?auto=format&fit=crop&w=300&q=80"),
         Product(4, "Grapes", "Fruits", 90.0, "https://images.unsplash.com/photo-1537640538966-79f369143f8f?auto=format&fit=crop&w=300&q=80"),
@@ -33,7 +33,7 @@ class MainViewModel(application: Application) : AndroidViewModel(application) {
         // Snacks
         Product(9, "Potato Chips", "Snacks", 30.0, "https://images.unsplash.com/photo-1621852004158-f3bc188ace2d?auto=format&fit=crop&w=300&q=80"),
         Product(10, "Nachos", "Snacks", 85.0, "https://images.unsplash.com/photo-1513456852971-30c0b8199d4d?auto=format&fit=crop&w=300&q=80"),
-        Product(11, "Popcorn", "Snacks", 50.0, "https://images.unsplash.com/photo-1585653040134-4538ec2f004f?auto=format&fit=crop&w=300&q=80"),
+        //Product(11, "Popcorn", "Snacks", 50.0, "https://images.unsplash.com/photo-1585653040134-4538ec2f004f?auto=format&fit=crop&w=300&q=80"),
         Product(12, "Cookies", "Snacks", 60.0, "https://images.unsplash.com/photo-1499636136210-6f4ee915583e?auto=format&fit=crop&w=300&q=80"),
 
         // Beverages
@@ -43,7 +43,7 @@ class MainViewModel(application: Application) : AndroidViewModel(application) {
         
         // Bakery
         Product(16, "Whole Wheat Bread", "Bakery", 45.0, "https://images.unsplash.com/photo-1509440159596-0249088772ff?auto=format&fit=crop&w=300&q=80"),
-        Product(17, "Croissant", "Bakery", 60.0, "https://images.unsplash.com/photo-1530610476181-d83430b64dcb?auto=format&fit=crop&w=300&q=80"),
+        //Product(17, "Croissant", "Bakery", 60.0, "https://images.unsplash.com/photo-1530610476181-d83430b64dcb?auto=format&fit=crop&w=300&q=80"),
         Product(18, "Muffins", "Bakery", 90.0, "https://images.unsplash.com/photo-1607958996333-41aef7caefaa?auto=format&fit=crop&w=300&q=80")
     )
 
